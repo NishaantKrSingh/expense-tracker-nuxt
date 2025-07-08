@@ -15,21 +15,17 @@
 </template>
 
 <script setup>
-import { useToast } from 'vue-toastification/dist/index.mjs';
 import { ref } from 'vue';
 
 const text = ref('');
 const amount = ref('');
 
-// Get toast interface
-const toast = useToast();
-
 const emit = defineEmits(['transactionSubmitted']);
 
 const onSubmit = () => {
     if (!text.value || !amount.value) {
-        // Display a toast error message if either field is empty
-        toast.error('Both fields must be filled.');
+        // Display a browser alert if either field is empty
+        alert('Both fields must be filled.');
         return;
     }
 
