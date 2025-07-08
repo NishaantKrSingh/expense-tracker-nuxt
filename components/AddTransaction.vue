@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import { useToast } from 'vue-toastification';
+import { useToast } from 'vue-toastification/dist/index.mjs';
 import { ref } from 'vue';
 
 const text = ref('');
